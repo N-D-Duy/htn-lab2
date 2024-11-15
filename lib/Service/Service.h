@@ -18,12 +18,11 @@ public:
     bool isAirConditionerOn();
     bool isFanOn();
     bool isWaterPumpOn();
-    void updateDeviceStates();
     void initService();
+    void countAttendance();
+    void getFirebaseData();
 
 private:
-    void loadCredentials();
-    void getFirebaseData();
     bool _isLightOn;
     bool _isAirConditionerOn;
     bool _isFanOn;

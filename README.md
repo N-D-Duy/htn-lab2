@@ -1,4 +1,4 @@
-## Create credential file at lib/Service/config.h
+# Create credential file at lib/Service/config.h
 ```
 #ifndef CONFIG_H
 #define CONFIG_H
