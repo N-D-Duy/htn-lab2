@@ -1,6 +1,7 @@
 {
     "C_Cpp.errorSquiggles": "disabled",
     "files.associations": {
+        "*.md": "platformio-debug.asm",
         "cstddef": "cpp",
         "array": "cpp",
         "atomic": "cpp",
@@ -49,6 +50,9 @@
         "stdexcept": "cpp",
         "streambuf": "cpp",
         "cinttypes": "cpp",
-        "typeinfo": "cpp"
+        "typeinfo": "cpp",
+        "chrono": "cpp",
+        "ratio": "cpp",
+        "thread": "cpp"
     }
 }

@@ -2,7 +2,7 @@
 #include "CMD.h"
 #include "STATE.h"
 
-Controller::Controller() : service() 
+Controller::Controller() : service()
 {
 }
 
@@ -38,6 +38,27 @@ void Controller::update(byte command)
         break;
     case CMD::PUMP_OFF:
         service.turnOffWaterPump();
+        break;
+    default:
+        break;
+    }
+}
+
+void Controller::roomManagement(byte state)
+{
+    switch (state)
+    {
+    case STATE::ROOM_EMPTY:
+        if (service.isLightOn())
+        {
+            service.turnOffLight();
+        }
+        break;
+    case STATE::ROOM_OCCUPIED:
+        if (!service.isLightOn())
+        {
+            service.turnOnLight();
+        }
         break;
     default:
         break;

@@ -11,6 +11,7 @@ public:
     void update(byte command);
     void streamData();
     bool getState(byte state);
+    void roomManagement(byte state);
     
 
 private:

@@ -28,7 +28,6 @@ void Service::getFirebaseData()
     {
         if (fbdo.dataType() != "null")
         {
-            Serial.println("Data available");
             jsonData.setJsonData(fbdo.jsonString());
 
             FirebaseJsonData jsonDataResult;
