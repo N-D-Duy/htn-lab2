@@ -6,27 +6,45 @@
 class Service {
 public:
     Service();
-    void turnOnLight();
-    void turnOffLight();
-    void turnOnAirConditioner();
-    void turnOffAirConditioner();
-    void turnOnFan();
-    void turnOffFan();
-    void turnOnWaterPump();
-    void turnOffWaterPump();
-    bool isLightOn();
-    bool isAirConditionerOn();
-    bool isFanOn();
-    bool isWaterPumpOn();
+    //hallway
+    void turnOnLightHallway();
+    void turnOffLightHallway();
+    bool isLightOnHallway();
+
+    //yard
+    void turnOnLightYard();
+    void turnOffLightYard();
+    bool isLightOnYard();
+
+
+    //meeting room
+    void turnOnLightMeetingRoom();
+    void turnOffLightMeetingRoom();
+    void turnOnProjector();
+    void turnOffProjector();
+    bool isLightOnMeetingRoom();
+    bool isProjectorOn();
+
+    //dormitory
+    void unlockDoor();
+    void lockDoor();
+    void turnOnLightDormitory();
+    void turnOffLightDormitory();
+    bool isDoorLocked();
+    bool isLightOnDormitory();
+
+    
     void initService();
-    void countAttendance();
+    void updateData(String path, String key, bool value);
     void getFirebaseData();
 
 private:
-    bool _isLightOn;
-    bool _isAirConditionerOn;
-    bool _isFanOn;
-    bool _isWaterPumpOn;
+    bool _isLightOnHallway;
+    bool _isLightOnYard;
+    bool _isLightOnMeetingRoom;
+    bool _isProjectorOn;
+    bool _isDoorLocked;
+    bool _isLightOnDormitory;
 };
 
 #endif

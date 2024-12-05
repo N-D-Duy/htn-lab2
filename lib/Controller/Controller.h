@@ -12,7 +12,6 @@ public:
     void streamData();
     bool getState(byte state);
     void roomManagement(byte state);
-    
 
 private:
     Service service; 
